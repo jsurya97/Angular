@@ -1,0 +1,15 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="" class="navbar-brand">Impiger</a></div>
+        <a *ngIf="isLoggedIn" routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+        <a *ngIf="isLoggedIn" routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <!-- <li>
+                <a *ngIf="!isLoggedIn" class="nav-link" href="/login">Login</a>
+            </li> -->
+            <li>
+                <a *ngIf="isLoggedIn" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
